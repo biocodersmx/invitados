@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Asistencia</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📱 Registrar Asistencia</h1>
+    <div id="scanner-container">
+      <canvas id="qr-canvas"></canvas>
+    </div>
+    <div id="result">Escanea un código QR</div>
+    
+    <!-- Para pruebas sin cámara -->
+    <div class="test-box">
+      <input type="text" id="manual-code" placeholder="Introduce código manual">
+      <button onclick="validateQR(document.getElementById('manual-code').value)">Probar</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
